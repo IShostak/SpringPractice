@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("omgCoach")
+@Component("omgCoach")//specify name
 @Scope("singleton") //specify bean scope
 public class NewCoach implements Coach{
 
