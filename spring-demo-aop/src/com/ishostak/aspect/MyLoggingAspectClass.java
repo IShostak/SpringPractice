@@ -8,9 +8,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyLoggingAspectClass {
 
-    //added all of our related advices
+    // .. in params means from 0 to more any params
+    // * means anything
 
-    @Before("execution(public void com.ishostak.aopdemo.dao.AccountDAO())")
+    /*
+      @Before("execution(* add* com.ishostak.aopdemo.dao.*.*(..))")
+      matches any class, any method in package
+     */
+
+    @Before("execution(* add* (com.ishostak.aopdemo.dao.Account, ..))")
     public void beforeAddAccount() {
         System.out.println("\n======> @Before advice on addAccount");
     }

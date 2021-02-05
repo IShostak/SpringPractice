@@ -1,5 +1,6 @@
 package com.ishostak.aopdemo;
 
+import com.ishostak.aopdemo.dao.Account;
 import com.ishostak.aopdemo.dao.AccountDAO;
 import com.ishostak.aopdemo.dao.MemberShipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,8 +18,10 @@ public class MainDemoApp {
 
         MemberShipDAO memberShipDAO = context.getBean("memberShipDAO", MemberShipDAO.class);
 
-        dao.addAccount();
+        dao.addAccount(new Account(), true);
+        dao.doWork();
 
+        memberShipDAO.goToSleep();
         memberShipDAO.addAccount();
 
         //close the context
