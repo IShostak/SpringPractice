@@ -7,5 +7,9 @@
 
 <a href = "test/hello" >Hello </a>
 
+<hr>
+
+<a href = "api/students" >Get all students </a>
+
 </body>
 </html>
