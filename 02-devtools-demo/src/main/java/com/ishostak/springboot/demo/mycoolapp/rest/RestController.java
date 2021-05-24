@@ -16,6 +16,6 @@ public class RestController {
 
     @GetMapping("/workout")
     public String getWorkou() {
-        return "Run over the world";
+        return "Run over the world twice";
     }
 }
